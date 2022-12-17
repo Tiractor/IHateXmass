@@ -28,6 +28,7 @@ public class Unit : MonoBehaviour
     }
     private void GiveDMG(Unit Target)
     {
+        if (Target == null) return;
         Target.ApplyDMG(Attack);
     }
 
@@ -35,6 +36,6 @@ public class Unit : MonoBehaviour
     public void Command_Attack()
     {
         Audio.Attack();
-        GiveDMG(Attack.Attack());
+        GiveDMG(Attack.ReturnTarget());
     }
 }
