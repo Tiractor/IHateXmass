@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Gun : AttackType
 {
@@ -61,4 +62,16 @@ public class Gun : AttackType
         }
         return Target;
     }
+
+    public void DoubleAttack()
+    {
+        Damage *= 2;
+        StartCoroutine(EndBuff());
+    }
+    private IEnumerator EndBuff()
+    {
+        yield return new WaitForSeconds(10);
+        Damage /= 2;
+    }
+
 }
