@@ -37,6 +37,7 @@ public class Unit : MonoBehaviour
         }
         else
         {
+            Cursor.lockState = CursorLockMode.None;
             Destroy(gameObject);
             SceneManager.LoadScene("End game");
         }
