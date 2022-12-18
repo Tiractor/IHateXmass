@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MilkSpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] itemPrefab;
     public int maxEnemy = 1;
 
     public float timeSpawn = 2f;
@@ -23,8 +23,10 @@ public class MilkSpawner : MonoBehaviour
             timer = timeSpawn;
             if (transform.childCount < maxEnemy)
             {
-                Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform);
+                int random = Random.Range(0, itemPrefab.Length - 1);
+                Instantiate(itemPrefab[random], transform.position, Quaternion.identity, transform);
             }
         }
     }
+
 }
