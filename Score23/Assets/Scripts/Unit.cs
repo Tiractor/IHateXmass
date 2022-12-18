@@ -31,10 +31,10 @@ public class Unit : MonoBehaviour
         if (Target == null) return;
         Target.ApplyDMG(Attack);
     }
-    
-    private void GiveDMG()
+
+    public float ReturnHP()
     {
-        return;
+        return HitPoints;
     }
 
     // Приказы, по-хорошему, отсюда управление мувментами ещё, но да
