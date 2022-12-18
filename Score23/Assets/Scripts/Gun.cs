@@ -19,13 +19,6 @@ public class Gun : AttackType
         _fpsCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
 
-    void Update()
-    {
-        if (Input.GetButtonDown("Fire1") && IsReady() && !IsReloading())
-        {
-            Shoot();
-        }
-    }
 
     private bool IsReady()
     {
@@ -43,17 +36,6 @@ public class Gun : AttackType
         _reloadingTimer -= Time.fixedDeltaTime;
     }
 
-    private void Shoot()
-    {
-        animator.Play("Shoot");
-        _currentAmmoCount--;
-        _cdTimer = coolDown;
-        if (_currentAmmoCount <= 0)
-        {
-            Reloading();
-        }
-    }
-
     private void Reloading()
     {
         animator.SetTrigger(Reloading1);
@@ -63,8 +45,20 @@ public class Gun : AttackType
 
     public override Unit ReturnTarget()
     {
-        if (!Physics.Raycast(_fpsCamera.transform.position, _fpsCamera.transform.forward, out var hit, Range)) return null;
-        var unit = hit.transform.GetComponent<Unit>();
-        return unit;
+        Unit Target = null;
+        if (IsReady() && !IsReloading())
+        {
+            animator.Play("Shoot");
+            _cdTimer = coolDown;
+            _currentAmmoCount--;
+            if (Physics.Raycast(_fpsCamera.transform.position, _fpsCamera.transform.forward, out var hit, Range))
+                Target = hit.transform.GetComponent<Unit>();
+        }
+        
+        if (_currentAmmoCount <= 0)
+        {
+            Reloading();
+        }
+        return Target;
     }
 }

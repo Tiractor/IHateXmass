@@ -18,7 +18,7 @@ public class MainPlayerController : MonoBehaviour
         Controll.HorizontalMove = GetComponent<FirstPersonMovement_Mod>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) Controll.HorizontalMove.Moving();
         if (Input.GetButtonDown("Jump")) Controll.UpMove.Jumping();
