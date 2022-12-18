@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : MonoBehaviour
+public class Pickup : AttackType
 {
-    static public float AddHp = 30;
+    public override Unit ReturnTarget()
+    {
+        Unit Target = null;
+        return Target;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //HP += AddHp;
+            other.GetComponent<Unit>().ApplyDMG(this);    
             Destroy(gameObject);
         }
     }
 
-
+    
 }

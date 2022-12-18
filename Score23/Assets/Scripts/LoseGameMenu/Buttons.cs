@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    public void Retart()
+    public void Restart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(1);
     }
     public void MainMenu()
     {
