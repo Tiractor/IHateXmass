@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class FirstPersonMovement_Mod : MonoBehaviour
@@ -38,5 +39,17 @@ public class FirstPersonMovement_Mod : MonoBehaviour
 
         // Apply movement.
         rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
+    }
+    public void ChangeSpeed()
+    {
+        speed += 3;
+        runSpeed += 3;
+        StartCoroutine(EndBuff());
+    }
+    private IEnumerator EndBuff()
+    {
+        yield return new WaitForSeconds(10);
+        speed -= 3;
+        runSpeed -= 3;
     }
 }
