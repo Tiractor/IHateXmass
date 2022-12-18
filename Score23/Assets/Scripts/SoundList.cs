@@ -11,6 +11,13 @@ public class SoundList : MonoBehaviour
     {
         _source = GetComponent<AudioSource>();
     }
+    public int GetSize(string What)
+    {
+        if (What == "Attack") return Audio_Attack.Length;
+        else if (What == "Death") return Audio_Death.Length;
+        else if (What == "TakeDamage") return Audio_TakeDamage.Length;
+        else return -1;
+    }
     public void TakeDamage()
     {
         if (Audio_TakeDamage.Length == 0) return;

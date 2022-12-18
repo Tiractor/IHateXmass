@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Gun : AttackType
 {
-    [SerializeField] private float range; // RNG of the gun
-    
     [SerializeField] private float reloadTime, coolDown; // RLD and CD of the gun
     private float _cdTimer, _reloadingTimer;
 
@@ -24,7 +22,7 @@ public class Gun : AttackType
     {
         if (Input.GetButtonDown("Fire1") && IsReady() && !IsReloading())
         {
-           Shoot();
+            Shoot();
         }
     }
 
@@ -68,6 +66,21 @@ public class Gun : AttackType
     public override Unit ReturnTarget()
     {
         if (!Physics.Raycast(_fpsCamera.transform.position, _fpsCamera.transform.forward, out var hit, range)) return null;
+        var unit = hit.transform.GetComponent<Unit>();
+        return unit;
+    }
+
+    private void Reloading()
+    {
+        animator.SetTrigger("Reloading");
+        Debug.Log("RELOAD!");
+        _currentAmmoCount = maxAmmoCount;
+        _reloadingTimer = reloadTime;
+    }
+
+    public override Unit ReturnTarget()
+    {
+        if (!Physics.Raycast(_fpsCamera.transform.position, _fpsCamera.transform.forward, out var hit, Range)) return null;
         var unit = hit.transform.GetComponent<Unit>();
         return unit;
     }
