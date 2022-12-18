@@ -11,6 +11,7 @@ public class Gun : AttackType
     private Camera _fpsCamera;
 
     [SerializeField] private Animator animator;
+    private static readonly int Reloading1 = Animator.StringToHash("Reloading");
 
     private void Start()
     {
@@ -45,7 +46,6 @@ public class Gun : AttackType
     private void Shoot()
     {
         animator.Play("Shoot");
-        Debug.Log("BANG!");
         _currentAmmoCount--;
         _cdTimer = coolDown;
         ReturnTarget();
@@ -57,23 +57,7 @@ public class Gun : AttackType
 
     private void Reloading()
     {
-        animator.SetTrigger("Reloading");
-        Debug.Log("RELOAD!");
-        _currentAmmoCount = maxAmmoCount;
-        _reloadingTimer = reloadTime;
-    }
-
-    public override Unit ReturnTarget()
-    {
-        if (!Physics.Raycast(_fpsCamera.transform.position, _fpsCamera.transform.forward, out var hit, range)) return null;
-        var unit = hit.transform.GetComponent<Unit>();
-        return unit;
-    }
-
-    private void Reloading()
-    {
-        animator.SetTrigger("Reloading");
-        Debug.Log("RELOAD!");
+        animator.SetTrigger(Reloading1);
         _currentAmmoCount = maxAmmoCount;
         _reloadingTimer = reloadTime;
     }
