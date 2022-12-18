@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: b3c343708572e284b917fc4e614aaa72
+  - enabled: 1
+    path: Assets/Scenes/ExplosiveEnemyScene.unity
+    guid: cdfeb1ec74fb0a643a7854c13f656234
   m_configObjects: {}
