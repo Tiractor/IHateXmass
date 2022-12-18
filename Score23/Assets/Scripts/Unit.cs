@@ -8,7 +8,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private AttackType Attack; // Для чего сделал разделение. 1) Возможность сделать несколько оружий у ГГ, дробовик/граната. 
     //2) Вариативность противников: рукопашный-летающий, рукопашный-наземный. При этом не надо повторяться с кодом, просто навесить одну и ту же атаку
     // Ещё бы сюда навесить "Управляющий класс" т.е. Перс-контроллер или АИ-контроллер
-    [SerializeField] private SoundList Audio;
+    private SoundList Audio;
     
     private void Awake()
     {
