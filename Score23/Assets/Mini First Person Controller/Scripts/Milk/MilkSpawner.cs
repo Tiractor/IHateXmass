@@ -18,12 +18,12 @@ public class MilkSpawner : MonoBehaviour
     private void Update()
     {
         timer -= Time.deltaTime;
-        if (timer <= 0)
+        if (timer <= 0 && itemPrefab.Length > 0)
         {
             timer = timeSpawn;
             if (transform.childCount < maxEnemy)
             {
-                int random = Random.Range(0, itemPrefab.Length - 1);
+                int random = Random.Range(0, itemPrefab.Length);
                 Instantiate(itemPrefab[random], transform.position, Quaternion.identity, transform);
             }
         }
