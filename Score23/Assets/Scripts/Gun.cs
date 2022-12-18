@@ -65,6 +65,21 @@ public class Gun : AttackType
 
     public override Unit ReturnTarget()
     {
+        if (!Physics.Raycast(_fpsCamera.transform.position, _fpsCamera.transform.forward, out var hit, range)) return null;
+        var unit = hit.transform.GetComponent<Unit>();
+        return unit;
+    }
+
+    private void Reloading()
+    {
+        animator.SetTrigger("Reloading");
+        Debug.Log("RELOAD!");
+        _currentAmmoCount = maxAmmoCount;
+        _reloadingTimer = reloadTime;
+    }
+
+    public override Unit ReturnTarget()
+    {
         if (!Physics.Raycast(_fpsCamera.transform.position, _fpsCamera.transform.forward, out var hit, Range)) return null;
         var unit = hit.transform.GetComponent<Unit>();
         return unit;
