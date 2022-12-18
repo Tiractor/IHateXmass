@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : AttackType
+public class PickupMilk : AttackType
 {
     public override Unit ReturnTarget()
     {
