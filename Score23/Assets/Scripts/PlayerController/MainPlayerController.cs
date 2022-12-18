@@ -13,6 +13,7 @@ public class MainPlayerController : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         ControlledChar = GetComponent<Unit>();
         Controll.UpMove = GetComponent<Jump_Mod>();
         Controll.HorizontalMove = GetComponent<FirstPersonMovement_Mod>();
