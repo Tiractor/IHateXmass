@@ -13,18 +13,20 @@ public class Unit : MonoBehaviour
     private void Awake()
     {
         Audio = GetComponent<SoundList>();
+        gameObject.TryGetComponent<AttackType>(out Attack);
     }
 
 
     private void Death()
     {
         Audio.Death();
+        Destroy(gameObject);
     }
     public void ApplyDMG(AttackType What)
     {
         HitPoints -= What.Damage;
         if (HitPoints <= 0) Death();
-        else Audio.TakeDamage();
+        else if (What.Damage > 0) Audio.TakeDamage();
     }
     private void GiveDMG(Unit Target)
     {
