@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 [RequireComponent(typeof(Unit), typeof(AttackType)), RequireComponent(typeof(NavMeshAgent), typeof(Rigidbody))]
@@ -11,6 +9,9 @@ public class EnemyController : MonoBehaviour
     private Unit ControlledChar;
     private AttackType _Attack;
 
+    [SerializeField] private float attackCooldown;
+    private float _timer;
+
     private void Awake()
     {
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Unit>();
@@ -18,11 +19,20 @@ public class EnemyController : MonoBehaviour
         ControlledChar = GetComponent<Unit>();
         _Attack = GetComponent<AttackType>();
     }
+
+    private void Attack()
+    {
+        ControlledChar.Command_Attack();
+        _timer = attackCooldown;
+    }
     private void FixedUpdate()
     {
-        
-        if ((_player.transform.position - transform.position).magnitude < _Attack.Range) { 
-            ControlledChar.Command_Attack();
+        transform.LookAt(_player.transform.position);
+        _timer -= Time.fixedDeltaTime;
+        if ((_player.transform.position - transform.position).magnitude < _Attack.Range)
+        {
+            if(_timer <= 0) Attack();
+            _agent.speed = 0;
         }
         else
         {
