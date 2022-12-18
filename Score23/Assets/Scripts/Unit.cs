@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(SoundList))]
 public class Unit : MonoBehaviour
 {
@@ -25,7 +26,6 @@ public class Unit : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-
     private void Death()
     {
         Audio.Death();
@@ -38,6 +38,7 @@ public class Unit : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("End game");
         }
     }
     public void ApplyDMG(AttackType What)
@@ -68,4 +69,6 @@ public class Unit : MonoBehaviour
         if (target == null) return;
         GiveDMG(target);
     }
+
+
 }
