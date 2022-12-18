@@ -48,7 +48,6 @@ public class Gun : AttackType
         animator.Play("Shoot");
         _currentAmmoCount--;
         _cdTimer = coolDown;
-        ReturnTarget();
         if (_currentAmmoCount <= 0)
         {
             Reloading();

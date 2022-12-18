@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(SoundList))]
 public class Unit : MonoBehaviour
@@ -33,11 +31,18 @@ public class Unit : MonoBehaviour
         if (Target == null) return;
         Target.ApplyDMG(Attack);
     }
+    
+    private void GiveDMG()
+    {
+        return;
+    }
 
     // Приказы, по-хорошему, отсюда управление мувментами ещё, но да
     public void Command_Attack()
     {
         Audio.Attack();
-        GiveDMG(Attack.ReturnTarget());
+        Unit target = Attack.ReturnTarget();
+        if (target == null) return;
+        GiveDMG(target);
     }
 }
