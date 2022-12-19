@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MilkSpawner : MonoBehaviour
@@ -28,5 +26,8 @@ public class MilkSpawner : MonoBehaviour
             }
         }
     }
-
+    public void IncreaseMaxEnemy()
+    {
+        maxEnemy++;
+    }
 }
