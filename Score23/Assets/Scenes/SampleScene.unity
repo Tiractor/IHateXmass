@@ -11280,7 +11280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab:
   - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
-  - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
+  - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
   - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
   maxEnemy: 1
   timeSpawn: 15
@@ -11499,6 +11499,7 @@ Transform:
   - {fileID: 1230031487}
   - {fileID: 1959572839}
   - {fileID: 2030464708}
+  - {fileID: 1927514378}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11710,7 +11711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab:
   - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
-  - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
+  - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
   - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
   - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
   maxEnemy: 1
@@ -11779,7 +11780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab:
   - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
-  - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
+  - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
   - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
   maxEnemy: 1
   timeSpawn: 20
@@ -12627,7 +12628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab:
   - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
-  - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
+  - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
   - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
   maxEnemy: 1
   timeSpawn: 10
@@ -13577,7 +13578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab:
   - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
-  - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
+  - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
   - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
   maxEnemy: 1
   timeSpawn: 10
@@ -15261,6 +15262,56 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.75012577, y: 0.6172723, z: 0.6203072}
   m_Center: {x: -0.0001570881, y: 0.30937752, z: 0.00075136137}
+--- !u!1 &1927514377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1927514378}
+  - component: {fileID: 1927514379}
+  m_Layer: 0
+  m_Name: MilkSpawner (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1927514378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927514377}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35.08, y: -3.1746435, z: -4.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1205372389}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1927514379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927514377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7da36f1f555c804ba94d311f36b05b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab:
+  - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
+  - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
+  - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
+  maxEnemy: 1
+  timeSpawn: 15
 --- !u!1 &1937150537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -447174402076232346, guid: 2546799a01313b74785b68c779cdc5f9, type: 3}
@@ -15493,7 +15544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab:
   - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
-  - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
+  - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
   - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
   maxEnemy: 1
   timeSpawn: 15
@@ -15813,7 +15864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab:
   - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
-  - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
+  - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
   - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
   - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
   maxEnemy: 1
