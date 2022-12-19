@@ -1,9 +1,18 @@
+using System;
 using UnityEngine;
 
 public class LoopManager : MonoBehaviour
 {
-    private float _gameTime;
+    [SerializeField] private Unit player;
+    
+    [SerializeField] private float _gameTime;
     private bool _isRunning;
+
+    private void Start()
+    {
+        RestartTimer();
+        StartTimer();
+    }
 
     private void FixedUpdate()
     {

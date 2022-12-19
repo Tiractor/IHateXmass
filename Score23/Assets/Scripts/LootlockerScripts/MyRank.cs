@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MyRank : MonoBehaviour
 {
-    private string _leaderboardKey = "time";
+    private readonly string _leaderboardKey = "time";
 
     private TextMeshProUGUI _myRank;
 
@@ -16,10 +16,10 @@ public class MyRank : MonoBehaviour
         {
             if (response.success)
             {
-                if (response.rank == 0 || response.score == 0) 
+                if (response.rank == 0) 
                     _myRank.text = "No current rank";
                 else 
-                    _myRank.text = "Your rank is:" + response.rank + " - " + response.score;
+                    _myRank.text = "Your rank is:" + response.rank + " - " + response.score + " sec";
             }
         });
     }
