@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (ControlledChar._isDead) return;
         transform.LookAt(_player.transform.position);
         _timer -= Time.fixedDeltaTime;
         if ((_player.transform.position - transform.position).magnitude < _Attack.Range)

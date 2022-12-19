@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fe3e7700b60ff40b2aa93854be6734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 20
+  HitPoints: 5
   Attack: {fileID: 0}
 --- !u!195 &8885873504853531048
 NavMeshAgent:
