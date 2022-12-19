@@ -13,7 +13,9 @@ public class PickupMilk : AttackType
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Unit>().ApplyDMG(this);    
+            Unit temp = other.GetComponent<Unit>();
+            if (temp.ReturnHP() > 85) Damage = temp.ReturnHP() - 100;
+            temp.ApplyDMG(this);
             Destroy(gameObject);
         }
     }
