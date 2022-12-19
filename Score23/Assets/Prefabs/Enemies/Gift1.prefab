@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -8285976364807225821}
   - component: {fileID: -4016073185092128704}
   - component: {fileID: -3354726425219132354}
+  - component: {fileID: -1280999334275571096}
   m_Layer: 0
   m_Name: Gift1
   m_TagString: Untagged
@@ -250,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fe3e7700b60ff40b2aa93854be6734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 20
+  HitPoints: 1
   Attack: {fileID: 0}
 --- !u!195 &-8285976364807225821
 NavMeshAgent:
@@ -302,6 +303,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8434b3a9cf8144181abcc81a584e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 10
   _player: {fileID: 0}
   attackCooldown: 1
+--- !u!65 &-1280999334275571096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6671426730424336726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
