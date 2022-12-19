@@ -5,7 +5,7 @@ public class Buttons : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SampleScene");
     }
     public void MainMenu()
     {
