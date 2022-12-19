@@ -70,9 +70,9 @@ public class Gun : AttackType
         return Target;
     }
 
-    public void DoubleAttack()
+    public void DoubleAttack(int count)
     {
-        Damage *= 2;
+        Damage *= count;
         StartCoroutine(EndBuff());
     }
     private IEnumerator EndBuff()
