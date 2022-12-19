@@ -8,7 +8,7 @@ public class PickupGingerMan : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Gun>().DoubleAttack(2);
+            other.GetComponentInChildren<Gun>().DoubleAttack(2);
             Destroy(gameObject);
         }
     }
