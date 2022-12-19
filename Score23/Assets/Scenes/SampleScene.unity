@@ -3403,6 +3403,7 @@ MonoBehaviour:
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
   - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
+  - {fileID: 3082452233691162333, guid: 69aa5ca77d0b9da45b1a529b03b61f14, type: 3}
   maxEnemy: 3
   timeSpawn: 10
 --- !u!114 &84325461
@@ -9571,6 +9572,7 @@ MonoBehaviour:
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
   - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
+  - {fileID: 3082452233691162333, guid: 69aa5ca77d0b9da45b1a529b03b61f14, type: 3}
   maxEnemy: 3
   timeSpawn: 10
 --- !u!114 &1096128426
@@ -11876,6 +11878,7 @@ MonoBehaviour:
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
   - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
+  - {fileID: 3082452233691162333, guid: 69aa5ca77d0b9da45b1a529b03b61f14, type: 3}
   maxEnemy: 1
   timeSpawn: 5
 --- !u!114 &1464542159
@@ -13177,6 +13180,7 @@ MonoBehaviour:
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
   - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
+  - {fileID: 3082452233691162333, guid: 69aa5ca77d0b9da45b1a529b03b61f14, type: 3}
   maxEnemy: 3
   timeSpawn: 10
 --- !u!114 &1732899834
@@ -14574,6 +14578,7 @@ MonoBehaviour:
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
   - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
+  - {fileID: 3082452233691162333, guid: 69aa5ca77d0b9da45b1a529b03b61f14, type: 3}
   maxEnemy: 3
   timeSpawn: 10
 --- !u!114 &2034202854

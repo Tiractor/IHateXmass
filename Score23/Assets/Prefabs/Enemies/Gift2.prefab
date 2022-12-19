@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642c6693328ef734e8e4f96700b95d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 2
-  Range: 3
+  Damage: 5
+  Range: 2
   _explosionEffect: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
 --- !u!82 &3247300728561593163
 AudioSource:
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fe3e7700b60ff40b2aa93854be6734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 1
+  HitPoints: 20
   Attack: {fileID: 0}
 --- !u!195 &8885873504853531048
 NavMeshAgent:
