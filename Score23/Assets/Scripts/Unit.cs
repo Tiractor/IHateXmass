@@ -12,7 +12,7 @@ public class Unit : MonoBehaviour
     private bool _isPlayer;
     private Animator _animator;
 
-    private bool _isDead;
+    public bool _isDead;
     
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class Unit : MonoBehaviour
         _isDead = true;
         if (!_isPlayer)
         {
-            Destroy(gameObject, _animator.GetCurrentAnimatorClipInfo(0).Length);
+            Destroy(gameObject, _animator.GetCurrentAnimatorClipInfo(0).Length-0.33f);
         }
         else
         {
