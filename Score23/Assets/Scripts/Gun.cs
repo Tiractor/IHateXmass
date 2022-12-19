@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections;
-
+[RequireComponent(typeof(AudioSource))]
 public class Gun : AttackType
 {
     [SerializeField] private float reloadTime, coolDown; // RLD and CD of the gun
     private float _cdTimer, _reloadingTimer;
-
+    private AudioSource _source;
+    [SerializeField] private AudioClip Audio_Reload;
+    [SerializeField] private AudioClip Audio_Shoot;
     [SerializeField] private int maxAmmoCount;
     private int _currentAmmoCount;
     
@@ -16,6 +18,7 @@ public class Gun : AttackType
 
     private void Start()
     {
+        _source = GetComponent<AudioSource>();
         _currentAmmoCount = maxAmmoCount;
         _fpsCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
@@ -39,6 +42,8 @@ public class Gun : AttackType
 
     private void Reloading()
     {
+        _source.clip = Audio_Reload;
+        _source.Play();
         animator.SetTrigger(Reloading1);
         _currentAmmoCount = maxAmmoCount;
         _reloadingTimer = reloadTime;
@@ -49,6 +54,8 @@ public class Gun : AttackType
         Unit Target = null;
         if (IsReady() && !IsReloading())
         {
+            _source.clip = Audio_Shoot;
+            _source.Play();
             animator.Play("Shoot");
             _cdTimer = coolDown;
             _currentAmmoCount--;
