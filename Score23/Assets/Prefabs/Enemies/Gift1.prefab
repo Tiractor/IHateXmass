@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fe3e7700b60ff40b2aa93854be6734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 20
+  HitPoints: 1
   Attack: {fileID: 0}
 --- !u!195 &-8285976364807225821
 NavMeshAgent:
@@ -302,6 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8434b3a9cf8144181abcc81a584e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 10
   _player: {fileID: 0}
   attackCooldown: 1

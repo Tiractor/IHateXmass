@@ -3402,6 +3402,7 @@ MonoBehaviour:
   - {fileID: 641252943174743319, guid: d5bf598b7d9c92e448377233345ea40b, type: 3}
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
+  - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
   maxEnemy: 4
   timeSpawn: 15
 --- !u!114 &84325461
@@ -9646,6 +9647,7 @@ MonoBehaviour:
   - {fileID: 641252943174743319, guid: d5bf598b7d9c92e448377233345ea40b, type: 3}
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
+  - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
   maxEnemy: 4
   timeSpawn: 15
 --- !u!114 &1096128426
@@ -10639,6 +10641,7 @@ MonoBehaviour:
   - {fileID: 2260500904047936026, guid: e52e4c7bd93bda74caac85b22c68e5e9, type: 3}
   - {fileID: 2065123770862640946, guid: 7a12352dd6705f348b680c80460bca3b, type: 3}
   - {fileID: 2147428930412944774, guid: cf614acc032bde7499cef2486a5f10db, type: 3}
+  - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
   maxEnemy: 1
   timeSpawn: 20
 --- !u!1 &1230914856 stripped
@@ -11949,6 +11952,7 @@ MonoBehaviour:
   - {fileID: 641252943174743319, guid: d5bf598b7d9c92e448377233345ea40b, type: 3}
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
+  - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
   maxEnemy: 1
   timeSpawn: 15
 --- !u!114 &1464542159
@@ -13377,6 +13381,7 @@ MonoBehaviour:
   - {fileID: 641252943174743319, guid: d5bf598b7d9c92e448377233345ea40b, type: 3}
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
+  - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
   maxEnemy: 4
   timeSpawn: 15
 --- !u!114 &1732899834
@@ -14773,6 +14778,7 @@ MonoBehaviour:
   - {fileID: 641252943174743319, guid: d5bf598b7d9c92e448377233345ea40b, type: 3}
   - {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
   - {fileID: 8436386483037904688, guid: 13f2fbec6ffb6f34ba0d5b5e6e6f92aa, type: 3}
+  - {fileID: 6671426730424336726, guid: 0f1dd88eae6281646a5756042db6ee40, type: 3}
   maxEnemy: 4
   timeSpawn: 15
 --- !u!114 &2034202854
