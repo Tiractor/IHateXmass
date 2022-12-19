@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 852990631, guid: 1f1d99965a27171448f90df6521900eb, type: 3}
+  m_Sprite: {fileID: 1310003473, guid: 1f1d99965a27171448f90df6521900eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ Animator:
   m_GameObject: {fileID: 6671426730424336726}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f69f0b153ecb0c4fa86f244bbe35fdd, type: 2}
+  m_Controller: {fileID: 9100000, guid: b3c8f88dfe4347d4caa3234abc3400e4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 2
-  Range: 5
+  Range: 2
   _explosionEffect: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
 --- !u!82 &6575818907980893376
 AudioSource:
@@ -236,16 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b223ba0e9c0004c954bb610d4a13aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Audio_TakeDamage:
-  - {fileID: 8300000, guid: 2fbc2b83952d2e646b9e2fe941d69f40, type: 3}
-  - {fileID: 8300000, guid: 86ddba5b24fdd1642bc9fc995ace035f, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
+  Audio_TakeDamage: []
   Audio_Attack: []
   Audio_Death:
   - {fileID: 8300000, guid: b59263d84dd7a19418361ae3474a4acd, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
   - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
   - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
 --- !u!114 &-4514959588615470258

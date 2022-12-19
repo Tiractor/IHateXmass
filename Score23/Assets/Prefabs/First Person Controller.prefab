@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &453450405308075389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8272085795093719819}
+  - component: {fileID: 4513324704808062615}
+  m_Layer: 0
+  m_Name: Shotgun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8272085795093719819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453450405308075389}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8999999, z: 0}
+  m_LocalScale: {x: 0.6522628, y: 0.6522628, z: 0.6522628}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4009530807960846968}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4513324704808062615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453450405308075389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c233f5b5f8cde54dbe7ffda8142293b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 20
+  Range: 100
+  reloadTime: 1
+  coolDown: 2
+  maxAmmoCount: 2
+  animator: {fileID: 0}
 --- !u!1 &3199595762932418495
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +247,7 @@ Transform:
   - {fileID: 2814456646758390448}
   - {fileID: 5436327511745290422}
   m_Father: {fileID: 4009530807960846968}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4011094852315407567
 MonoBehaviour:
@@ -384,7 +434,6 @@ GameObject:
   - component: {fileID: 3912516996105279038}
   - component: {fileID: 3912516996105279039}
   - component: {fileID: 3912516996105279037}
-  - component: {fileID: 3912516996105279034}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -404,6 +453,7 @@ Transform:
   m_LocalScale: {x: 1.5331244, y: 1.5331244, z: 1.5331244}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8272085795093719819}
   - {fileID: 4009811539039905176}
   - {fileID: 4009779315370196274}
   - {fileID: 4015716292667782068}
@@ -623,24 +673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackKey: 323
---- !u!114 &3912516996105279034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4011590841943218640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c233f5b5f8cde54dbe7ffda8142293b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 20
-  Range: 100
-  reloadTime: 1
-  coolDown: 2
-  maxAmmoCount: 2
-  animator: {fileID: 0}
 --- !u!1 &4012216780083731066
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +704,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4009530807960846968}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4025962088886495368
 MeshFilter:
@@ -754,7 +786,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4009530807960846968}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3908155154432819408
 MonoBehaviour:
@@ -804,7 +836,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4009530807960846968}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4027025391788321994
 Camera:

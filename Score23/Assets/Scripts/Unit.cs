@@ -17,7 +17,7 @@ public class Unit : MonoBehaviour
     private void Awake()
     {
         Audio = GetComponent<SoundList>();
-        gameObject.TryGetComponent<AttackType>(out Attack);
+        if(Attack == null) gameObject.TryGetComponent<AttackType>(out Attack);
         if (CompareTag("Player"))
         {
             _isPlayer = CompareTag("Player");
@@ -33,12 +33,11 @@ public class Unit : MonoBehaviour
         _isDead = true;
         if (!_isPlayer)
         {
-            Destroy(gameObject, _animator.GetCurrentAnimatorClipInfo(0).Length-0.33f);
+            Destroy(gameObject, _animator.GetCurrentAnimatorClipInfo(0).Length);
         }
         else
         {
             Cursor.lockState = CursorLockMode.None;
-            Destroy(gameObject);
             SceneManager.LoadScene("End game");
         }
     }
@@ -65,9 +64,9 @@ public class Unit : MonoBehaviour
     // Приказы, по-хорошему, отсюда управление мувментами ещё, но да
     public void Command_Attack()
     {
-        Audio.Attack();
         Unit target = Attack.ReturnTarget();
         if (target == null) return;
+        Audio.Attack();
         GiveDMG(target);
     }
 
