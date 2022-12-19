@@ -5,10 +5,9 @@ namespace MenuSpace
 {
     public class StartGameScript : MonoBehaviour
     {
-        [SerializeField] private int _loadSceneIndex = 1;
         public void StartGame()
         {
-            SceneManager.LoadScene(_loadSceneIndex);
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
