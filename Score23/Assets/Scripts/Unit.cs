@@ -37,6 +37,7 @@ public class Unit : MonoBehaviour
         }
         else
         {
+            PlayerPrefs.SetInt("Time", Mathf.RoundToInt(GameObject.FindWithTag("GameController").GetComponent<LoopManager>().ReturnTime()));
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("End game");
         }

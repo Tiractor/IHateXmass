@@ -7604,9 +7604,10 @@ GameObject:
   - component: {fileID: 785806386}
   - component: {fileID: 785806387}
   - component: {fileID: 785806388}
+  - component: {fileID: 785806389}
   m_Layer: 5
   m_Name: HPBar
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7698,6 +7699,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 136877097523835652}
   hpSlider: {fileID: 785806387}
+--- !u!114 &785806389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785806385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6685ff451c8bd41ab89b1eb9da8050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 136877097523835652}
+  _gameTime: 0
 --- !u!1 &803908796 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 549215060267217290, guid: 2546799a01313b74785b68c779cdc5f9, type: 3}
