@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 3912516996105279426}
   - component: {fileID: 3993100048184776950}
   - component: {fileID: 3912516996105279035}
-  - component: {fileID: 3912516996105279032}
+  - component: {fileID: 6762128517509644175}
   - component: {fileID: 3912516996105279033}
   - component: {fileID: 3912516996105279038}
   - component: {fileID: 3912516996105279039}
@@ -686,7 +686,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3912516996105279032
+--- !u!114 &6762128517509644175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -695,26 +695,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4011590841943218640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b223ba0e9c0004c954bb610d4a13aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ed171805eac1e34891466e7398766ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Audio_TakeDamage:
-  - {fileID: 8300000, guid: aa4984c01ea86fa4f846d1ad6c61bbbb, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  Audio_Attack:
-  - {fileID: 8300000, guid: 2e9b1d85d037bd044a86901e2dd4b095, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  Audio_Death:
-  - {fileID: 8300000, guid: 068e699bd45f99743a844db685215be2, type: 3}
+  IsMusic: 0
+  WaitingSoundEnd: 1
+  Everything:
+  - KeyName: Death
+    Sounds: []
+  - KeyName: TakeDamage
+    Sounds: []
+  - KeyName: Attack
+    Sounds: []
+  NowPlaying: 0
 --- !u!114 &3912516996105279033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitPoints: 100
   Attack: {fileID: 4513324704808062615}
+  _isDead: 0
 --- !u!114 &3912516996105279038
 MonoBehaviour:
   m_ObjectHideFlags: 0

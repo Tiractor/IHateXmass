@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 641252943174743326}
   - component: {fileID: 641252943174743327}
   - component: {fileID: 641252943174743312}
-  - component: {fileID: 641252943174743313}
+  - component: {fileID: 8485519806397556061}
   - component: {fileID: 641252943174743314}
   - component: {fileID: 641252943174743315}
   - component: {fileID: 641252943174743316}
@@ -222,7 +222,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &641252943174743313
+--- !u!114 &8485519806397556061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,29 +231,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 641252943174743319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b223ba0e9c0004c954bb610d4a13aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ed171805eac1e34891466e7398766ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Audio_TakeDamage:
-  - {fileID: 8300000, guid: 2fbc2b83952d2e646b9e2fe941d69f40, type: 3}
-  - {fileID: 8300000, guid: 86ddba5b24fdd1642bc9fc995ace035f, type: 3}
-  - {fileID: 8300000, guid: b7958b6218d8fdf4f9f34a181d5dfd95, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  Audio_Attack:
-  - {fileID: 8300000, guid: 56c22afee108bbe4497651a79b1908c2, type: 3}
-  - {fileID: 8300000, guid: 81304486ed240c845b99b4789b9396be, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  Audio_Death:
-  - {fileID: 8300000, guid: b59263d84dd7a19418361ae3474a4acd, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
-  - {fileID: 8300000, guid: b2a452ad621c1fc46aa3cc91ca69f541, type: 3}
+  IsMusic: 0
+  WaitingSoundEnd: 1
+  Everything:
+  - KeyName: Death
+    Sounds: []
+  - KeyName: TakeDamage
+    Sounds: []
+  - KeyName: Attack
+    Sounds: []
+  NowPlaying: 0
 --- !u!114 &641252943174743314
 MonoBehaviour:
   m_ObjectHideFlags: 0
