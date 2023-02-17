@@ -9,4 +9,8 @@ public class ExplosiveAttack : AttackType
         GameObject.FindWithTag("Player").GetComponent<Unit>().ApplyDMG(gameObject.GetComponent<ExplosiveAttack>());
         return gameObject.GetComponent<Unit>();
     }
+    public override Unit[] ReturnTargets()
+    {
+        return null;
+    }
 }

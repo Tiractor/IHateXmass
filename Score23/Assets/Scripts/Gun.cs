@@ -1,14 +1,14 @@
 using UnityEngine;
 using System.Collections;
-[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(SoundList))]
 public class Gun : AttackType
 {
     [SerializeField] private float reloadTime, coolDown; // RLD and CD of the gun
     private float _cdTimer, _reloadingTimer;
-    private AudioSource _source;
-    [SerializeField] private AudioClip Audio_Reload;
-    [SerializeField] private AudioClip Audio_Shoot;
+    private SoundList _source;
     [SerializeField] private int maxAmmoCount;
+    [SerializeField] private float SpreadRadius=1;
+    [SerializeField] private int CountOfRays = 1;
     private int _currentAmmoCount;
     
     private Camera _fpsCamera;
@@ -18,7 +18,7 @@ public class Gun : AttackType
 
     private void Start()
     {
-        _source = GetComponent<AudioSource>();
+        _source = GetComponent<SoundList>();
         _currentAmmoCount = maxAmmoCount;
         _fpsCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
@@ -42,32 +42,45 @@ public class Gun : AttackType
 
     private void Reloading()
     {
-        _source.clip = Audio_Reload;
-        _source.Play();
+        _source.Play("Reload");
         animator.SetTrigger(Reloading1);
         _currentAmmoCount = maxAmmoCount;
         _reloadingTimer = reloadTime;
     }
-
     public override Unit ReturnTarget()
     {
-        Unit Target = null;
+        return null;
+    }
+    private Vector3 Spread()
+    {
+        Vector3 Result = _fpsCamera.transform.forward;
+        Vector2 Temp = Random.insideUnitCircle * SpreadRadius;
+        Result.x += Temp.x;
+        Result.y += Temp.y;
+        return Result;
+    }
+    public override Unit[] ReturnTargets()
+    {
+        Unit[] Targets = new Unit[CountOfRays];
         if (IsReady() && !IsReloading())
         {
-            _source.clip = Audio_Shoot;
-            _source.Play();
+            int CountOfDamages = 0;
+            _source.Play("Shoot");
             animator.Play("Shoot");
             _cdTimer = coolDown;
             _currentAmmoCount--;
-            if (Physics.Raycast(_fpsCamera.transform.position, _fpsCamera.transform.forward, out var hit, Range))
-                Target = hit.transform.GetComponent<Unit>();
+            for (int i = 0; i < CountOfRays; ++i)
+            {
+                if (Physics.Raycast(_fpsCamera.transform.position, Spread(), out var hit, Range))
+                    Targets[CountOfDamages] = hit.transform.GetComponent<Unit>();
+            }
         }
         
         if (_currentAmmoCount <= 0)
         {
             Reloading();
         }
-        return Target;
+        return Targets;
     }
 
     public void DoubleAttack(int count)

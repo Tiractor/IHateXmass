@@ -53,8 +53,16 @@ public class Unit : MonoBehaviour
     {
         if(_isDead) return;
         if (Target == null) return;
-        if(!_isPlayer) _animator.Play("Attack");
+        Audio.Play("Attack");
+        if (!_isPlayer) _animator.Play("Attack");
         Target.ApplyDMG(Attack);
+    }
+
+    private void GiveDMG(Unit[] Target)
+    {
+        foreach(Unit current in Target) {
+            GiveDMG(current);
+        }
     }
 
     public float ReturnHP()
@@ -65,10 +73,8 @@ public class Unit : MonoBehaviour
     // �������, ��-��������, ������ ���������� ���������� ���, �� ��
     public void Command_Attack()
     {
-        Unit target = Attack.ReturnTarget();
-        if (target == null) return;
-        Audio.Play("Attack");
-        GiveDMG(target);
+        if (Attack.Splash)GiveDMG(Attack.ReturnTargets());
+        else GiveDMG(Attack.ReturnTarget());
     }
 
 

@@ -6,4 +6,8 @@ public class StandartAttack : AttackType
     {
         return GameObject.FindWithTag("Player").GetComponent<Unit>();
     }
+    public override Unit[] ReturnTargets()
+    {
+        return null;
+    }
 }
