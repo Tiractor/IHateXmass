@@ -13,7 +13,6 @@ public class Unit : MonoBehaviour
     private Animator _animator;
 
     public bool _isDead;
-    
     private void Awake()
     {
         Audio = GetComponent<SoundList>();
@@ -44,7 +43,12 @@ public class Unit : MonoBehaviour
     }
     public void ApplyDMG(AttackType What)
     {
-        if(!_isPlayer) _animator.Play("TakeDamage");
+        if (_isPlayer)
+        {
+            TakeDamageCanvas.isPlayerTakeDamage();
+        }
+
+        if (!_isPlayer) _animator.Play("TakeDamage");
         HitPoints -= What.Damage;
         if (HitPoints <= 0) Death();
         else if (What.Damage > 0) Audio.TakeDamage();
