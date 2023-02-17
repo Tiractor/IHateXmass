@@ -16743,5 +16743,6 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1645952501}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3912516996105279032, guid: f7cbc5f120554db4eaa5d85860ec9858, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7cbc5f120554db4eaa5d85860ec9858, type: 3}

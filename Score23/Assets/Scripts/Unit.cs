@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 public class Unit : MonoBehaviour
 {
     [SerializeField, Range(0, 100)] private float HitPoints;
-    [SerializeField] private AttackType Attack; // Для чего сделал разделение. 1) Возможность сделать несколько оружий у ГГ, дробовик/граната. 
-    //2) Вариативность противников: рукопашный-летающий, рукопашный-наземный. При этом не надо повторяться с кодом, просто навесить одну и ту же атаку
-    // Ещё бы сюда навесить "Управляющий класс" т.е. Перс-контроллер или АИ-контроллер
+    [SerializeField] private AttackType Attack; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. 1) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. 
+    //2) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ" пїЅ.пїЅ. пїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     private SoundList Audio;
 
     private bool _isPlayer;
@@ -28,7 +28,7 @@ public class Unit : MonoBehaviour
 
     private void Death()
     {
-        Audio.Death();
+        Audio.Play("Death");
         if(!_isPlayer) _animator.Play("Death");
         _isDead = true;
         if (!_isPlayer)
@@ -47,7 +47,7 @@ public class Unit : MonoBehaviour
         if(!_isPlayer) _animator.Play("TakeDamage");
         HitPoints -= What.Damage;
         if (HitPoints <= 0) Death();
-        else if (What.Damage > 0) Audio.TakeDamage();
+        else if (What.Damage > 0) Audio.Play("TakeDamage");
     }
     private void GiveDMG(Unit Target)
     {
@@ -62,12 +62,12 @@ public class Unit : MonoBehaviour
         return HitPoints;
     }
 
-    // Приказы, по-хорошему, отсюда управление мувментами ещё, но да
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅ
     public void Command_Attack()
     {
         Unit target = Attack.ReturnTarget();
         if (target == null) return;
-        Audio.Attack();
+        Audio.Play("Attack");
         GiveDMG(target);
     }
 
