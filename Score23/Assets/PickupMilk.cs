@@ -9,6 +9,11 @@ public class PickupMilk : AttackType
         Unit Target = null;
         return Target;
     }
+    public override Unit[] ReturnTargets()
+    {
+        Unit[] Target = null;
+        return Target;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

@@ -9,7 +9,7 @@ public class Unit : MonoBehaviour
     // ��� �� ���� �������� "����������� �����" �.�. ����-���������� ��� ��-����������
     private SoundList Audio;
 
-    private bool _isPlayer;
+    [SerializeField] private bool _isPlayer;
     private Animator _animator;
 
     public bool _isDead;
@@ -43,19 +43,20 @@ public class Unit : MonoBehaviour
     }
     public void ApplyDMG(AttackType What)
     {
+        Debug.Log(4);
         if (_isPlayer)
         {
-            TakeDamageCanvas.isPlayerTakeDamage();
+            MainPlayerController._Canvas.isPlayerTakeDamage();
         }
-
-        if (!_isPlayer) _animator.Play("TakeDamage");
+        else _animator.Play("TakeDamage");
         HitPoints -= What.Damage;
         if (HitPoints <= 0) Death();
         else if (What.Damage > 0) Audio.Play("TakeDamage");
     }
     private void GiveDMG(Unit Target)
     {
-        if(_isDead) return;
+        Debug.Log(3 + "Single");
+        if (_isDead) return;
         if (Target == null) return;
         Audio.Play("Attack");
         if (!_isPlayer) _animator.Play("Attack");
@@ -64,7 +65,8 @@ public class Unit : MonoBehaviour
 
     private void GiveDMG(Unit[] Target)
     {
-        foreach(Unit current in Target) {
+        Debug.Log(3 + "A lot of");
+        foreach (Unit current in Target) {
             GiveDMG(current);
         }
     }
@@ -77,6 +79,7 @@ public class Unit : MonoBehaviour
     // �������, ��-��������, ������ ���������� ���������� ���, �� ��
     public void Command_Attack()
     {
+        Debug.Log(2);
         if (Attack.Splash)GiveDMG(Attack.ReturnTargets());
         else GiveDMG(Attack.ReturnTarget());
     }
