@@ -10,6 +10,7 @@ public class Unit : MonoBehaviour
     private SoundList Audio;
 
     [SerializeField] private bool _isPlayer;
+    public bool isImmortal;
     private Animator _animator;
 
     public bool _isDead;
@@ -43,6 +44,7 @@ public class Unit : MonoBehaviour
     }
     public void ApplyDMG(AttackType What)
     {
+        if (isImmortal) return;
         Debug.Log(4);
         if (_isPlayer)
         {
