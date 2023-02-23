@@ -7,7 +7,7 @@ namespace MenuSpace
     {
         public void StartGame()
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("MapBuilding");
         }
     }
 }
