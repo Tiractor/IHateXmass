@@ -54,7 +54,10 @@ MonoBehaviour:
   maxAmmoCount: 2
   SpreadRadius: 1
   CountOfRays: 1
+  Test: {fileID: 0}
+  Holder: {fileID: 4011590841943218640}
   animator: {fileID: 0}
+  TestMode: 0
 --- !u!82 &8075485924647168324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -811,7 +814,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ControlledChar: {fileID: 0}
+  _Canvas: {fileID: 0}
   AttackKey: 323
+  Controll:
+    UpMove: {fileID: 0}
+    HorizontalMove: {fileID: 0}
 --- !u!114 &2893288247779047007
 MonoBehaviour:
   m_ObjectHideFlags: 0

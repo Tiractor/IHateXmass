@@ -45,10 +45,9 @@ public class Unit : MonoBehaviour
     public void ApplyDMG(AttackType What)
     {
         if (isImmortal) return;
-        Debug.Log(4);
         if (_isPlayer)
         {
-            MainPlayerController._Canvas.isPlayerTakeDamage();
+            GetComponent<TakeDamageCanvas>().isPlayerTakeDamage();
         }
         else _animator.Play("TakeDamage");
         HitPoints -= What.Damage;
@@ -57,7 +56,6 @@ public class Unit : MonoBehaviour
     }
     private void GiveDMG(Unit Target)
     {
-        Debug.Log(3 + "Single");
         if (_isDead) return;
         if (Target == null) return;
         Audio.Play("Attack");
@@ -67,7 +65,6 @@ public class Unit : MonoBehaviour
 
     private void GiveDMG(Unit[] Target)
     {
-        Debug.Log(3 + "A lot of");
         foreach (Unit current in Target) {
             GiveDMG(current);
         }
@@ -81,7 +78,6 @@ public class Unit : MonoBehaviour
     // �������, ��-��������, ������ ���������� ���������� ���, �� ��
     public void Command_Attack()
     {
-        Debug.Log(2);
         if (Attack.Splash)GiveDMG(Attack.ReturnTargets());
         else GiveDMG(Attack.ReturnTarget());
     }
