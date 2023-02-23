@@ -62,7 +62,17 @@ public class Gun : AttackType
         Result += Temp;
         if (TestMode) Debug.Log(Temp);
         if (TestMode) Debug.Log(Result);
+        
         return Result;
+    }
+    void DeLox(Unit[] input)
+    {
+        string Output = "Names of DeadMan:\n";
+        foreach(Unit current in input)
+        {
+            if(current != null) Output += current.gameObject.name + "\n";
+        }
+        Debug.Log(Output);
     }
     public override Unit[] ReturnTargets()
     {
@@ -77,8 +87,16 @@ public class Gun : AttackType
             for (int i = 0; i < CountOfRays; ++i)
             {
                 if (Physics.Raycast(_fpsCamera.transform.position, Spread(), out var hit, Range)) { 
-                    Targets[CountOfDamages] = hit.transform.GetComponent<Unit>();
-                    if (TestMode) Instantiate(Test, hit.point, Quaternion.identity);
+                    Targets[CountOfDamages] = hit.collider.GetComponent<Unit>();
+                    
+                    CountOfDamages++;
+                    
+                    if (TestMode)
+                    {
+                        DeLox(Targets);
+                        Debug.DrawLine(_fpsCamera.transform.position, hit.point, Color.red, 10);
+                        if(Test != null) Instantiate(Test, hit.point, Quaternion.identity);
+                    }
                 }
             }
         }
@@ -87,6 +105,7 @@ public class Gun : AttackType
         {
             Reloading();
         }
+        
         return Targets;
     }
 

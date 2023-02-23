@@ -65,8 +65,12 @@ public class Unit : MonoBehaviour
 
     private void GiveDMG(Unit[] Target)
     {
+       // Debug.Log(Target);
         foreach (Unit current in Target) {
-            GiveDMG(current);
+            if (current != null) { 
+               // Debug.Log("GiveDMG" + current.gameObject.name);
+                GiveDMG(current);
+            }
         }
     }
 
