@@ -10,10 +10,11 @@ public class Gun : AttackType
     [SerializeField] private float SpreadRadius=1;
     [SerializeField] private int CountOfRays = 1;
     private int _currentAmmoCount;
-    
+    [SerializeField] private GameObject Test;
     private Camera _fpsCamera;
-
+    [SerializeField] private GameObject Holder;
     [SerializeField] private Animator animator;
+    [SerializeField] private bool TestMode = false;
     private static readonly int Reloading1 = Animator.StringToHash("Reloading");
 
     private void Start()
@@ -54,9 +55,13 @@ public class Gun : AttackType
     private Vector3 Spread()
     {
         Vector3 Result = _fpsCamera.transform.forward;
-        Vector2 Temp = Random.insideUnitCircle * SpreadRadius;
-        Result.x += Temp.x;
-        Result.y += Temp.y;
+        if(TestMode) Debug.Log(Result);
+        Vector3 Temp = Quaternion.Euler(_fpsCamera.transform.rotation.x, 0, 0)
+            *
+            (Random.insideUnitCircle * SpreadRadius);
+        Result += Temp;
+        if (TestMode) Debug.Log(Temp);
+        if (TestMode) Debug.Log(Result);
         return Result;
     }
     public override Unit[] ReturnTargets()
@@ -71,8 +76,10 @@ public class Gun : AttackType
             _currentAmmoCount--;
             for (int i = 0; i < CountOfRays; ++i)
             {
-                if (Physics.Raycast(_fpsCamera.transform.position, Spread(), out var hit, Range))
+                if (Physics.Raycast(_fpsCamera.transform.position, Spread(), out var hit, Range)) { 
                     Targets[CountOfDamages] = hit.transform.GetComponent<Unit>();
+                    if (TestMode) Instantiate(Test, hit.point, Quaternion.identity);
+                }
             }
         }
         
