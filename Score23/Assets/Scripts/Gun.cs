@@ -7,13 +7,14 @@ public class Gun : AttackType
     private float _cdTimer, _reloadingTimer;
     private SoundList _source;
     [SerializeField] private int maxAmmoCount;
-    [SerializeField] private float SpreadRadius=1;
+    [SerializeField] private float SpreadRadius = 1;
     [SerializeField] private int CountOfRays = 1;
     private int _currentAmmoCount;
     [SerializeField] private GameObject Test;
     private Camera _fpsCamera;
     [SerializeField] private GameObject Holder;
     [SerializeField] private Animator animator;
+    public Animator ChangeAnimator { get { return animator; } set {  animator = value; } }  
     [SerializeField] private bool TestMode = false;
     private static readonly int Reloading1 = Animator.StringToHash("Reloading");
 
