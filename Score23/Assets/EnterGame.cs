@@ -1,20 +1,23 @@
+using System;
 using UnityEngine;
 
 public class EnterGame : MonoBehaviour
 {
-    public GameObject Wall;
-    public GameObject Spawner;
-    public GameObject NextLevel;
-    public GameObject PreviousLevel;
+    public GameObject[] ShowObjects;
+    public GameObject[] HideObjects;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Wall.SetActive(true);
-            Spawner.SetActive(true);
-            NextLevel.SetActive(true);
-            PreviousLevel.SetActive(false);
-            Destroy(gameObject);
+            foreach (GameObject show in ShowObjects)
+            {
+                show.SetActive(true);
+            }
+            foreach (GameObject show in HideObjects)
+            {
+                show.SetActive(false);
+            }
         }
     }
 }
