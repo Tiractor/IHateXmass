@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class CookieBoss : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyToSpawn, enemiesHolder;
+    [SerializeField] private GameObject[] enemyToSpawn;
+    [SerializeField] private GameObject enemiesHolder;
+    [SerializeField] private GameObject DefeatEffect;
+    [SerializeField] private GameObject Weapon;
     [SerializeField] private float spawnerTime;
     [SerializeField] private int enemiesToSpawnCount;
     private float _timer;
@@ -32,12 +35,19 @@ public class CookieBoss : MonoBehaviour
     {
         for (int i = 0; i < enemiesToSpawnCount; i++)
         {
-            Instantiate(enemyToSpawn, transform.position, Quaternion.identity, enemiesHolder.transform);
+            int random = Random.Range(0, enemyToSpawn.Length);
+            Instantiate(enemyToSpawn[random], transform.position, Quaternion.identity, enemiesHolder.transform);
         }
     }
 
     private void CheckChildCount()
     {
         _bossUnit.isImmortal = enemiesHolder.transform.childCount > 0;
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(DefeatEffect, transform.position, Quaternion.identity, enemiesHolder.transform);
+        Weapon.SetActive(true);
     }
 }
