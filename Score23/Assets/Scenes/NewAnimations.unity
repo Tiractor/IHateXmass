@@ -12843,7 +12843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1410437605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17190,9 +17190,13 @@ PrefabInstance:
       value: First Person Controller
       objectReference: {fileID: 0}
     - target: {fileID: 4513324704808062615, guid: f7cbc5f120554db4eaa5d85860ec9858, type: 3}
+      propertyPath: Holder
+      value: 
+      objectReference: {fileID: 4011094852258489663}
+    - target: {fileID: 4513324704808062615, guid: f7cbc5f120554db4eaa5d85860ec9858, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 738522744}
+      objectReference: {fileID: 1410437606}
     m_RemovedComponents:
     - {fileID: 3912516996105279032, guid: f7cbc5f120554db4eaa5d85860ec9858, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7cbc5f120554db4eaa5d85860ec9858, type: 3}
