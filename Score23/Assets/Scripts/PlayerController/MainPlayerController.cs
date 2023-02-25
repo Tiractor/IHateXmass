@@ -2,6 +2,7 @@ using UnityEngine;
 [RequireComponent(typeof(Unit)), RequireComponent(typeof(Jump_Mod), typeof(FirstPersonMovement_Mod), typeof(TakeDamageCanvas)) ]
 public class MainPlayerController : MonoBehaviour
 {
+    public GameObject CurrentGun;
     [SerializeField] private Unit ControlledChar;
     public KeyCode AttackKey = KeyCode.Mouse0;
     [System.Serializable]
