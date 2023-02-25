@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class Unit : MonoBehaviour
 {
     [SerializeField, Range(0, 100)] private float HitPoints;
-    [SerializeField] private AttackType Attack; // ��� ���� ������ ����������. 1) ����������� ������� ��������� ������ � ��, ��������/�������. 
+    [SerializeField] public AttackType Attack; // ��� ���� ������ ����������. 1) ����������� ������� ��������� ������ � ��, ��������/�������. 
     //2) ������������� �����������: ����������-��������, ����������-��������. ��� ���� �� ���� ����������� � �����, ������ �������� ���� � �� �� �����
     // ��� �� ���� �������� "����������� �����" �.�. ����-���������� ��� ��-����������
     private SoundList Audio;
