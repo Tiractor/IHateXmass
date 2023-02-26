@@ -286,9 +286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fe3e7700b60ff40b2aa93854be6734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 40
+  HitPoints: 30
   Attack: {fileID: 8436386483037904681}
   _isPlayer: 0
+  isImmortal: 0
   _isDead: 0
 --- !u!195 &8436386483037904693
 NavMeshAgent:

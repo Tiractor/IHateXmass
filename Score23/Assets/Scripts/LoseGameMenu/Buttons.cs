@@ -5,7 +5,7 @@ public class Buttons : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MapBuilding");
     }
     public void MainMenu()
     {
