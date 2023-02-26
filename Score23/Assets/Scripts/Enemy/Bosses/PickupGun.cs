@@ -4,28 +4,32 @@ using UnityEngine;
 
 public class PickupGun : MonoBehaviour
 {
-    [SerializeField] GameObject Door, Explosion;
-    [SerializeField] GameObject NewGun, HUDPrev, HUDNew;
-
+    public GameObject[] ShowObjects;
+    public GameObject[] HideObjects;
+    [SerializeField] GameObject NewGun;
+    public bool Destroy;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             GameObject Temp = other.GetComponent<MainPlayerController>().CurrentGun;
 
-            Explosion.SetActive(true);
-            Door.SetActive(false);
-
-            HUDPrev.SetActive(false);
-            HUDNew.SetActive(true);
+            foreach (GameObject show in ShowObjects)
+            {
+                show.SetActive(true);
+            }
+            foreach (GameObject show in HideObjects)
+            {
+                show.SetActive(false);
+            }
 
             other.GetComponent<Unit>().Attack = NewGun.GetComponent<AttackType>();
             Temp.active = false;
             Temp = NewGun;
             Temp.active = true;
 
-
-            Destroy(gameObject);
+            if (Destroy)
+                Destroy(gameObject);
         }
     }
 }
