@@ -10,7 +10,7 @@ public class TakeDamageCanvas : MonoBehaviour
     private void Awake()
     {
         _hitImage = GetComponent<RawImage>();
-        _hitImage.texture = (Texture)UnityEditor.EditorUtility.InstanceIDToObject(43438);
+        //_hitImage.texture = (Texture)UnityEditor.EditorUtility.InstanceIDToObject(43438);
         _hitImage.color = _color;
     }
     private void Update()

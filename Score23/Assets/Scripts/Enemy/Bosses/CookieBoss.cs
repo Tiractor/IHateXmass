@@ -23,9 +23,10 @@ public class CookieBoss : MonoBehaviour
     {
         _timer += Time.fixedDeltaTime;
         Debug.Log(_timer);
-        if (_timer > spawnerTime && enemiesHolder.transform.childCount <= 1)
+        if (_timer > spawnerTime)
         {
-            SpawnEnemies();
+            if(enemiesHolder.transform.childCount <= 1)
+                SpawnEnemies();
             _timer = 0;
         }
         CheckChildCount();    

@@ -1,5 +1,5 @@
 using UnityEngine; 
-[RequireComponent(typeof(Unit)), RequireComponent(typeof(Jump_Mod), typeof(FirstPersonMovement_Mod), typeof(TakeDamageCanvas)) ]
+[RequireComponent(typeof(Unit)), RequireComponent(typeof(Jump_Mod), typeof(FirstPersonMovement_Mod)) ]
 public class MainPlayerController : MonoBehaviour
 {
     public GameObject CurrentGun;
