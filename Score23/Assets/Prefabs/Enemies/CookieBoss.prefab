@@ -105,7 +105,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 1, z: 0.2}
+  m_Size: {x: 0.6, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &411026636547485183
 Animator:
@@ -370,7 +370,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6954dd128503a6d40bcb0dfc75e7545c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyToSpawn: {fileID: 564448038056364543, guid: 6771ffe2eb27ec44182820ae2092b92a, type: 3}
+  enemyToSpawn:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   enemiesHolder: {fileID: 0}
+  DefeatEffect: {fileID: 0}
+  Weapon: {fileID: 0}
   spawnerTime: 30
   enemiesToSpawnCount: 3

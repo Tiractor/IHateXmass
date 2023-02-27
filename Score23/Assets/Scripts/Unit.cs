@@ -47,7 +47,7 @@ public class Unit : MonoBehaviour
         if (isImmortal) return;
         if (_isPlayer)
         {
-            GetComponent<TakeDamageCanvas>().isPlayerTakeDamage();
+            //GetComponent<TakeDamageCanvas>().isPlayerTakeDamage();
         }
         else _animator.Play("TakeDamage");
         HitPoints -= What.Damage;

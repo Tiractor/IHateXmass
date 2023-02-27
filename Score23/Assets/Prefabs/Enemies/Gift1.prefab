@@ -286,6 +286,7 @@ MonoBehaviour:
   HitPoints: 5
   Attack: {fileID: 7048246812720623401}
   _isPlayer: 0
+  isImmortal: 0
   _isDead: 0
 --- !u!195 &-8285976364807225821
 NavMeshAgent:
@@ -351,5 +352,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 1, z: 0.2}
+  m_Size: {x: 0.6, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
