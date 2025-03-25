@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tirac\\Documents\\GitHub\\IHateXmass\\Score23_clone_0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FA1DAC1-B925-6307-7A82-10E6B09AA16E}|Assembly-CSharp.csproj|c:\\users\\tirac\\documents\\github\\ihatexmass\\score23_clone_0\\assets\\scripts\\multiplayer\\playerspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FA1DAC1-B925-6307-7A82-10E6B09AA16E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\multiplayer\\playerspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerSpawn.cs",
+              "DocumentMoniker": "C:\\Users\\tirac\\Documents\\GitHub\\IHateXmass\\Score23_clone_0\\Assets\\Scripts\\MultiPlayer\\PlayerSpawn.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MultiPlayer\\PlayerSpawn.cs",
+              "ToolTip": "C:\\Users\\tirac\\Documents\\GitHub\\IHateXmass\\Score23_clone_0\\Assets\\Scripts\\MultiPlayer\\PlayerSpawn.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MultiPlayer\\PlayerSpawn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T17:59:23.234Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

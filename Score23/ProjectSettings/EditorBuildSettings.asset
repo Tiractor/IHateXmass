@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/LoginScene.unity
     guid: f9e78673dec95e04bbd980b51f76a10e
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/TempMultiplayer.unity
+    guid: 48d52dbd38d8d26448e428f399717c2c
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Menu.unity
     guid: b3c343708572e284b917fc4e614aaa72
   - enabled: 1
-    path: Assets/Scenes/MapBuilding.unity
+    path: Assets/Scenes/BuildScenes/MapBuilding.unity
     guid: 851cac7ea42e1e648aa81a65d2f1bdf4
   - enabled: 1
-    path: Assets/Scenes/End game.unity
+    path: Assets/Scenes/BuildScenes/End game.unity
     guid: 73b9730a937c7774a899cc86d0431ae4
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Multiplayer.unity
+    guid: a8e4f6daafd40984e86d38b7a5575f65
   m_configObjects: {}

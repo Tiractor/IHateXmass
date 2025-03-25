@@ -1,6 +1,9 @@
+using System.Globalization;
+using Unity.Netcode;
 using UnityEngine; 
 [RequireComponent(typeof(Unit)), RequireComponent(typeof(Jump_Mod), typeof(FirstPersonMovement_Mod)) ]
-public class MainPlayerController : MonoBehaviour
+[RequireComponent(typeof(NetworkObject))]
+public class MainPlayerController : NetworkBehaviour
 {
     public GameObject CurrentGun;
     [SerializeField] private Unit ControlledChar;
@@ -23,6 +26,7 @@ public class MainPlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (!IsOwner) return;
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) Controll.HorizontalMove.Moving();
         if (Input.GetButtonDown("Jump")) Controll.UpMove.Jumping();
         if (Input.GetKey(AttackKey))ControlledChar.Command_Attack();

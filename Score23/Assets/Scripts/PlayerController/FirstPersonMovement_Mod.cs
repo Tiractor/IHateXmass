@@ -22,6 +22,14 @@ public class FirstPersonMovement_Mod : MonoBehaviour
     {
         // Get the rigidbody on this.
         rigidbody = GetComponent<Rigidbody>();
+        
+    }
+    private void Start()
+    {
+        if (PlayerSpawn.PlaceRef != null)
+        {
+            transform.position = PlayerSpawn.PlaceRef.transform.position;
+        }
     }
 
     public void Moving()

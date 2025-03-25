@@ -9,5 +9,9 @@ namespace MenuSpace
         {
             SceneManager.LoadScene("MapBuilding");
         }
+        public void InitMultiplayer()
+        {
+            gameObject.AddComponent<SimpleNetworkHUD>();
+        }
     }
 }

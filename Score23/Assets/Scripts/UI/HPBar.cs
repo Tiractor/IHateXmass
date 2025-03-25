@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +9,11 @@ public class HPBar : MonoBehaviour
 
     private void OnEnable()
     {
-        _maxHitPoints = player.ReturnHP();
+        if(player != null) _maxHitPoints = player.ReturnHP();
     }
 
     private void Update()
     {
-        hpSlider.value = player.ReturnHP() / _maxHitPoints;
+        if (player != null) hpSlider.value = player.ReturnHP() / _maxHitPoints;
     }
 }
